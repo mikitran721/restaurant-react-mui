@@ -11,3 +11,6 @@
 - cai dat `npm i @mui/icons-material `
 
 # NOI DUNG
+
+- Menu with Drawer
+- Footer with MUI-Icons
