@@ -7,10 +7,10 @@ import {
   IconButton,
   Divider,
 } from "@mui/material";
-import FastfoodIcon from "@mui/icons-material/Fastfood";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import Drawer from "@mui/material/Drawer";
+import Logo from "../../images/logo.svg";
 
 import "../../styles/HeaderStyle.css";
 
@@ -31,22 +31,23 @@ const Header = () => {
         component="div"
         sx={{ flexGrow: 1, my: 2 }}
       >
-        <FastfoodIcon />
-        My Restaurant
+        <img src={Logo} height={"70"} width={"200"}></img>
       </Typography>
       <Divider />
       <ul className="mobile-navigation">
         <li>
-          <Link to="/">Home</Link>
+          <NavLink activeClassName="active" to="/">
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to="/menu">Menu</Link>
+          <NavLink to="/menu">Menu</NavLink>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <NavLink to="/about">About</NavLink>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <NavLink to="/contact">Contact</NavLink>
         </li>
       </ul>
     </Box>
@@ -71,22 +72,23 @@ const Header = () => {
               component="div"
               sx={{ flexGrow: 1 }}
             >
-              <FastfoodIcon />
-              My Restaurant
+              <img src={Logo} height={"70"} width={"250"}></img>
             </Typography>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               <ul className="navigation-menu">
                 <li>
-                  <Link to="/">Home</Link>
+                  <NavLink activeClassName="active" to="/">
+                    Home
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/menu">Menu</Link>
+                  <NavLink to="/menu">Menu</NavLink>
                 </li>
                 <li>
-                  <Link to="/about">About</Link>
+                  <NavLink to="/about">About</NavLink>
                 </li>
                 <li>
-                  <Link to="/contact">Contact</Link>
+                  <NavLink to="/contact">Contact</NavLink>
                 </li>
               </ul>
             </Box>
@@ -108,7 +110,7 @@ const Header = () => {
             {drawer}
           </Drawer>
         </Box>
-        <Box>
+        <Box sx={{ p: 2 }}>
           <Toolbar />
         </Box>
       </Box>
