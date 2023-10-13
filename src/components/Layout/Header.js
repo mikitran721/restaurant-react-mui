@@ -110,7 +110,7 @@ const Header = () => {
             {drawer}
           </Drawer>
         </Box>
-        <Box sx={{ p: 2 }}>
+        <Box sx={{ p: 0.5 }}>
           <Toolbar />
         </Box>
       </Box>
