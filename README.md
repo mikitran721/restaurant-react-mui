@@ -14,3 +14,4 @@
 
 - Menu with Drawer
 - Footer with MUI-Icons
+- About page
